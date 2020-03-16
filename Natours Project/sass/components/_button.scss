@@ -34,6 +34,18 @@
   &--white {
     color: $color-grey-dark;
     background-color: $color-white;
+
+    &::after {
+      color: $color-white;
+    }
+  }
+
+  &--green {
+    color: $color-white;
+    background-color: $color-primary;
+    &::after {
+      color: $color-primary;
+    }
   }
 
   /* pseudo button for animating our main header button */
@@ -54,6 +66,9 @@
     background-color: $color-white;
   }
 
+  &--green::after {
+    background-color: $color-primary;
+  }
   &.btn:hover::after {
     transform: scaleX(1.4);
     transform: scaleY(1.6);
