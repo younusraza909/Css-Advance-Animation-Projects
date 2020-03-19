@@ -1,6 +1,7 @@
 /* Buttons */
 
 .btn {
+  &,
   &:link,
   &:visited {
     text-decoration: none;
@@ -12,6 +13,10 @@
     backface-visibility: hidden;
     position: relative;
     font-size: $default-font-size;
+
+    // Change For button element
+    border: none;
+    cursor: pointer;
   }
   &--animated {
     animation-name: moveInBottom;
@@ -26,7 +31,9 @@
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
   }
 
-  &:active {
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
